@@ -7,8 +7,8 @@
     3、呼叫对方或者收到对方呼叫之后点击接听
     <div>
       <button @click="login">登录</button>
-      <button @click="Call">呼叫</button>
-      <button @click="Accept">接听</button>
+      <button @click="call">呼叫</button>
+      <button @click="accept">接听</button>
       <button @click="hangup">挂断</button>
     </div>
     <div>
@@ -87,7 +87,7 @@ export default {
         },
       })
     },
-    Call() {
+    call() {
       // 发起呼叫
       const localView = document.getElementById('NE_local')
       const remoteView = document.getElementById('NE_remote')
@@ -100,7 +100,7 @@ export default {
         callType: '2', //呼叫类型，1表示语音通话，2表示视频通话 
       })
     },
-    Accept() {
+    accept() {
       // 接受邀请
       const localView = document.getElementById('NE_local')
       const remoteView = document.getElementById('NE_remote')
@@ -116,33 +116,5 @@ export default {
       this.message = ''
     }
   },
-  props: {
-    msg: String
-  }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-
-button {
-  margin: 10px;
-}
-</style>
