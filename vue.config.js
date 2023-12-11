@@ -1,11 +1,11 @@
-const path = require('path')
+// const path = require('path')
 
-module.exports = {
-  configureWebpack: {
-    resolve: {
-      alias: {
-       'nertc-web-sdk': path.resolve(__dirname, 'node_modules/nertc-web-sdk'),
-      },
-    },
-  }
-}
+// module.exports = {
+//   configureWebpack: {
+//     resolve: {
+//       alias: {
+//        'nertc-web-sdk': path.resolve(__dirname, 'node_modules/nertc-web-sdk'),
+//       },
+//     },
+//   }
+// }
