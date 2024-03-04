@@ -94,7 +94,7 @@ export default {
       console.log(this.neCall)
       neCall.setLocalView(localView)
       neCall.setRemoteView(remoteView, this.callee)
-      neCall.setTimeout({ callTimeout: 30000, rejectTimeout: 30000 })//主叫和被叫均要设置
+      neCall.setTimeout(30)//设置呼叫超时取消时间，单位：秒
       neCall.call({
         accId: this.callee, // 被叫 im 的 id
         callType: '2', //呼叫类型，1表示语音通话，2表示视频通话 
